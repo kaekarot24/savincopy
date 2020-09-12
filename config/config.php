@@ -30,8 +30,8 @@ define('_CURRENTTIME',date('Y-m-d H:i:s'));
 define('MAILSERVER','smtp.gmail.com');   //smtpout.secureserver.net
 define('SMTPPORT','587');
 define('SMTPAUTH','tls');
-define('MAILUSERNAME','animesh@savincommunication.com'); 
-define('MAILPASSWORD','Animesh@1234');	 
+define('MAILUSERNAME','XXXXXXXXXXXX'); 
+define('MAILPASSWORD','XXXXXXXX');	 
 define('REQUEST_TIME',date("Y-m-d H:i:s",time()));
 define('REQUEST_DATE',date("Y-m-d",time()));
 
