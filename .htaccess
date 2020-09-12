@@ -1,0 +1,35 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !^/app/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ app/$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ app/index.php
+
+
+# Deny access to files with extensions .ini, .psd, .log, .sh
+<FilesMatch "\.(ini|psd|log|sh|html|aws)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^credentials">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+
+# Disable directory browsing 
+Options -Indexes
+
+
+# START - Disable server signature #
+ServerSignature Off
+# END - Disable server signature #
